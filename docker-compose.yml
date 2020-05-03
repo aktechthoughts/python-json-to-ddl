@@ -1,0 +1,8 @@
+version: '3'
+services:
+  aws-cli:
+    image: aktechthoughts/aws-cli
+    build: .
+    volumes:
+     - /home/ubuntu/.aws:/root/.aws
+     - /home/ubuntu/data:/app/data
