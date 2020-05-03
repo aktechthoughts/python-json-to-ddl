@@ -19,7 +19,6 @@ def insert_json_data(inputfile):
   for i in range(len(fl)):
     sql = "INSERT INTO Feeds (data) VALUES(%s)"
     val = [(fl[i])]
-    print(val)
     mycursor.execute(sql, val)
 
     mydb.commit()
