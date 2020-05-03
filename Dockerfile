@@ -5,7 +5,7 @@ RUN apt-get update \
  && apt-get install -y ansible \
  && apt-get install -y awscli \
  && apt-get install -y python3-pip \
- && apt-get install mysql-client
+ && apt-get install -y mysql-client
 
 RUN mkdir -p /root/.aws
 RUN mkdir -p /app/sql
