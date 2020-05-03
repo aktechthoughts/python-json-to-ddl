@@ -3,7 +3,7 @@ import os
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host=os.environ['HOST_NAME'],
+  host=os.environ['DB_HOST_NAME'],
   user=os.environ['USER_NAME'],
   passwd=os.environ['PASSWORD'],
   database=os.environ['DB_NAME'],
@@ -19,7 +19,7 @@ def insert_json_data(inputfile):
   for i in range(len(fl)):
     sql = "INSERT INTO Feeds (data) VALUES(%s)"
     val = [(fl[i])]
-
+    print(val)
     mycursor.execute(sql, val)
 
     mydb.commit()
@@ -27,6 +27,6 @@ def insert_json_data(inputfile):
 
  
 if __name__== "__main__":
-  inputfile = sys.argv[0]
+  inputfile = sys.argv[1]
   insert_json_data(inputfile)
 
