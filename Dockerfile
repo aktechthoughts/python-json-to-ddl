@@ -22,7 +22,7 @@ RUN pip3 install -r requirements.txt
 ENV HOST_NAME=mysql-test.cyqas5b0owfs.eu-central-1.rds.amazonaws.com
 ENV USER_NAME=mysql_admin
 ENV PASSWORD=1nsecure
-ENV DB_NAME=Tweets
+ENV DB_NAME=tweets
 
 
 # FROM python:3.7-alpine
